@@ -70,8 +70,8 @@ def update(i):
 anime = animation.FuncAnimation(fig, update, frames=len(axis_x[0]), interval=100, save_count=50)
 
 anime.save('raw.gif', fps=60)
-#import moviepy.editor as mp
-#clip = mp.VideoFileClip("raw.gif")
-#clip.write_videofile("movie.mp4")
+
+import gif_to_mp4_converter as idk
+idk.convert("raw.gif")
 
 plt.show()
